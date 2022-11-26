@@ -1,8 +1,8 @@
 import dash_bootstrap_components as dbc
 import dash_daq as daq
 from dash import html,Input,Output,State,dcc,Dash
-from UI import menu,Style,PrivateKey
-from CryptographyBlockchain import PrivateKey as cpk
+from UI import menu,Style,KeysUI
+from CryptographyBlockchain import CreateKeys 
 from urllib.parse import unquote
 
 app=Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -20,8 +20,9 @@ def render(pathname):
     else:
         url=unquote(pathname)[1:]
         if url in menu.menu_list:
-            functions={"Create Private key":PrivateKey.create_private_item}
-            d=functions[url](cpk.create_private_key())
+            functions={"Create Private key":KeysUI.create_Keys_UI}
+            private_key,public_key=CreateKeys.Create_keys()
+            d=functions[url](private_key,public_key)
             return Style.DisplayNone,d
         
 

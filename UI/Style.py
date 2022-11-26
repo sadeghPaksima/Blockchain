@@ -10,3 +10,6 @@ DisplayNone={
 DisplayBlock={
     "display": "block"
 }
+YellowColor={
+    "color":"yellow"
+}
