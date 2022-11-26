@@ -16,3 +16,7 @@ YellowColor={
 GreenColor={
     "color":"green"
 }
+PositionSticky={
+    "position": "sticky",
+    "top": 0
+}
