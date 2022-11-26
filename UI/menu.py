@@ -1,6 +1,6 @@
 from dash import html
 import dash_bootstrap_components as dbc
-menu_list=['Create Private key','create public key' ,"Sign message","Verify sign","Mine"]
+menu_list=['Create Private and Public keys' ,"Sign message","Verify sign","Mine"]
 from UI import Style
 def create_card_content(Text):
     card_content = [
@@ -34,5 +34,5 @@ def Create_Card():
     col=dbc.Col([])
     col.children.append(create_two_rows(menu_list[0],menu_list[1]))
     col.children.append(create_two_rows(menu_list[2],menu_list[3]))
-    col.children.append(create_single_row(menu_list[4]))
+    # col.children.append(create_single_row(menu_list[4]))
     return col

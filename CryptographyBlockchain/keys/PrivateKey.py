@@ -15,3 +15,8 @@ def private_key_to_PEM(private_key):
     format=serialization.PrivateFormat.TraditionalOpenSSL,
     encryption_algorithm=serialization.NoEncryption())
     return pem.decode("utf-8")
+
+def convert_pem_to_private_key(pem):
+    bytes_pem=str.encode(pem)
+    private_key=serialization.load_pem_private_key(bytes_pem,password=None)
+    return private_key
