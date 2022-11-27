@@ -20,3 +20,6 @@ PositionSticky={
     "position": "sticky",
     "top": 0
 }
+Margin50={
+    "margin":"10px 300px"
+}
