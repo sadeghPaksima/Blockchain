@@ -11,4 +11,4 @@
 <h2>create Private and Public keys</h2>
 <img src="../description/private_and_public_keys.jpg"/>
 <h2>Mine data</h2>
-<img src="../description/Mine.png.jpg"/>
+<img src="../description/Mine.png"/>
