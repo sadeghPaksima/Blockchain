@@ -6,6 +6,15 @@ from UI import Style
 def create_UI_Mine(*args):
 
     return dbc.Col([
+        dbc.Alert(
+            "successfully mine",
+            color="success",
+            id="alert-mine",
+            dismissable=True,
+            is_open=False,
+            style=Style.PositionSticky
+            
+            ),
         dbc.Row([
             dbc.Col(
                 html.H5("Block #:", style=Style.YellowColor),width=2
